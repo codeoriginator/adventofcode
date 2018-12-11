@@ -19,8 +19,7 @@ let inputObj = input.map((str) => {
 
 inputObj.sort((objA, objB) => {
 	return objA.date - objB.date;
-})
-
+});
 
 // Shelved the below as creating a nested object is complicating the code. 
 /*inputObj.forEach((rec, index) => {
@@ -52,7 +51,6 @@ inputObj.sort((objA, objB) => {
 		}
 	}
 });*/
-
 
 // Record the sleep time for all guards
 let dayRecords = [];
@@ -104,9 +102,6 @@ dayRecords.forEach((rec) => {
 	}
 });
 
-
-
-
 // Sleep record for each guard
 const getGuardSleepReport = (gID) => {
 	const guardSleepReport = new Array(60).fill(0);
@@ -143,8 +138,6 @@ const getMostsleepyMinute = () => {
 	console.log('Most sleepy minutes', gsr1.indexOf(largest));
 };
 
-
-
 const getGuardSleepyMinute = gsr => {
 	let largest = 0;
 	gsr.forEach(ele => {
@@ -154,11 +147,6 @@ const getGuardSleepyMinute = gsr => {
 	});
 
 	return largest;
-
 };
 
 getMostsleepyMinute();
-
-
-
-
